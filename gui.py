@@ -75,7 +75,7 @@ def start_conversation():
 
 def handle_voice_interaction():
     audio_file = record_audio_dynamic()
-    transcribed_text, whisper_lang = transcribe_audio(audio_file, model_size="small")
+    transcribed_text, whisper_lang = transcribe_audio(audio_file, model_size="large")
 
     # Determine language
     language_code = whisper_lang if whisper_lang and whisper_lang.lower() != "unknown" else detect(transcribed_text)
